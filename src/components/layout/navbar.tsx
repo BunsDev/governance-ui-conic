@@ -1,3 +1,4 @@
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 import useScroll from "../../hooks/use-scroll";
 import logo from '../../assets/logo.svg'
 
@@ -24,14 +25,7 @@ export default function NavBar() {
               className="mr-2 rounded-sm"
             />
           </a>
-          <div>
-            <button
-              className="button rounded-full border border-black bg-black p-1.5 px-4 text-xl text-white transition-all hover:bg-white hover:text-black"
-              onClick={() => {}}
-            >
-              Launch
-            </button>
-          </div>
+          <ConnectButton />
         </div>
       </div>
     </>
