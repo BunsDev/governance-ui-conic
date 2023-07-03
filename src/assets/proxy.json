@@ -1,1 +1,363 @@
-[{"inputs":[{"internalType":"address","name":"governance","type":"address"},{"internalType":"address","name":"veto","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint64","name":"changeId","type":"uint64"}],"name":"ChangeCanceled","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint64","name":"changeId","type":"uint64"}],"name":"ChangeExecuted","type":"event"},{"anonymous":false,"inputs":[{"components":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"indexed":false,"internalType":"struct IGovernanceProxy.Call[]","name":"calls","type":"tuple[]"},{"indexed":false,"internalType":"uint64","name":"delay","type":"uint64"},{"indexed":false,"internalType":"uint64","name":"changeId","type":"uint64"}],"name":"ChangeRequested","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes4","name":"selector","type":"bytes4"},{"indexed":false,"internalType":"uint64","name":"delay","type":"uint64"}],"name":"DelayUpdated","type":"event"},{"inputs":[],"name":"GOVERNANCE_ROLE","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"VETO_ROLE","outputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"}],"name":"accountsWithRole","outputs":[{"internalType":"address[]","name":"","type":"address[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint64","name":"id","type":"uint64"}],"name":"cancelChange","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"","type":"bytes4"}],"name":"delays","outputs":[{"internalType":"uint64","name":"","type":"uint64"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint64","name":"id","type":"uint64"}],"name":"executeChange","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"offset","type":"uint256"},{"internalType":"uint256","name":"n","type":"uint256"}],"name":"getEndedChanges","outputs":[{"components":[{"internalType":"enum IGovernanceProxy.Status","name":"status","type":"uint8"},{"internalType":"uint64","name":"id","type":"uint64"},{"internalType":"uint64","name":"requestedAt","type":"uint64"},{"internalType":"uint64","name":"delay","type":"uint64"},{"internalType":"uint64","name":"endedAt","type":"uint64"},{"components":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"internalType":"struct IGovernanceProxy.Call[]","name":"calls","type":"tuple[]"}],"internalType":"struct IGovernanceProxy.Change[]","name":"","type":"tuple[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getEndedChanges","outputs":[{"components":[{"internalType":"enum IGovernanceProxy.Status","name":"status","type":"uint8"},{"internalType":"uint64","name":"id","type":"uint64"},{"internalType":"uint64","name":"requestedAt","type":"uint64"},{"internalType":"uint64","name":"delay","type":"uint64"},{"internalType":"uint64","name":"endedAt","type":"uint64"},{"components":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"internalType":"struct IGovernanceProxy.Call[]","name":"calls","type":"tuple[]"}],"internalType":"struct IGovernanceProxy.Change[]","name":"","type":"tuple[]"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getEndedChangesCount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint64","name":"changeId","type":"uint64"}],"name":"getPendingChange","outputs":[{"components":[{"internalType":"enum IGovernanceProxy.Status","name":"status","type":"uint8"},{"internalType":"uint64","name":"id","type":"uint64"},{"internalType":"uint64","name":"requestedAt","type":"uint64"},{"internalType":"uint64","name":"delay","type":"uint64"},{"internalType":"uint64","name":"endedAt","type":"uint64"},{"components":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"internalType":"struct IGovernanceProxy.Call[]","name":"calls","type":"tuple[]"}],"internalType":"struct IGovernanceProxy.Change","name":"change","type":"tuple"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"getPendingChanges","outputs":[{"components":[{"internalType":"enum IGovernanceProxy.Status","name":"status","type":"uint8"},{"internalType":"uint64","name":"id","type":"uint64"},{"internalType":"uint64","name":"requestedAt","type":"uint64"},{"internalType":"uint64","name":"delay","type":"uint64"},{"internalType":"uint64","name":"endedAt","type":"uint64"},{"components":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"internalType":"struct IGovernanceProxy.Call[]","name":"calls","type":"tuple[]"}],"internalType":"struct IGovernanceProxy.Change[]","name":"","type":"tuple[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"}],"name":"getRoleMemberCount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"},{"internalType":"address","name":"account","type":"address"}],"name":"grantRole","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"},{"internalType":"address","name":"account","type":"address"}],"name":"hasRole","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"nextChangeId","outputs":[{"internalType":"uint64","name":"","type":"uint64"}],"stateMutability":"view","type":"function"},{"inputs":[{"components":[{"internalType":"address","name":"target","type":"address"},{"internalType":"bytes","name":"data","type":"bytes"}],"internalType":"struct IGovernanceProxy.Call[]","name":"calls","type":"tuple[]"}],"name":"requestChange","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes32","name":"role","type":"bytes32"},{"internalType":"address","name":"account","type":"address"}],"name":"revokeRole","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bytes4","name":"selector","type":"bytes4"},{"internalType":"uint64","name":"delay","type":"uint64"}],"name":"updateDelay","outputs":[],"stateMutability":"nonpayable","type":"function"}]
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "governance", "type": "address" },
+      { "internalType": "address", "name": "veto", "type": "address" }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "changeId",
+        "type": "uint64"
+      }
+    ],
+    "name": "ChangeCanceled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint64",
+        "name": "changeId",
+        "type": "uint64"
+      }
+    ],
+    "name": "ChangeExecuted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "target", "type": "address" },
+          { "internalType": "bytes", "name": "data", "type": "bytes" }
+        ],
+        "indexed": false,
+        "internalType": "struct IGovernanceProxy.Call[]",
+        "name": "calls",
+        "type": "tuple[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "delay",
+        "type": "uint64"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "changeId",
+        "type": "uint64"
+      }
+    ],
+    "name": "ChangeRequested",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes4",
+        "name": "selector",
+        "type": "bytes4"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint64",
+        "name": "delay",
+        "type": "uint64"
+      }
+    ],
+    "name": "DelayUpdated",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "GOVERNANCE_ROLE",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "VETO_ROLE",
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" }
+    ],
+    "name": "accountsWithRole",
+    "outputs": [
+      { "internalType": "address[]", "name": "", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint64", "name": "id", "type": "uint64" }],
+    "name": "cancelChange",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "bytes4", "name": "", "type": "bytes4" }],
+    "name": "delays",
+    "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "uint64", "name": "id", "type": "uint64" }],
+    "name": "executeChange",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "offset", "type": "uint256" },
+      { "internalType": "uint256", "name": "n", "type": "uint256" }
+    ],
+    "name": "getEndedChanges",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IGovernanceProxy.Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          { "internalType": "uint64", "name": "id", "type": "uint64" },
+          { "internalType": "uint64", "name": "requestedAt", "type": "uint64" },
+          { "internalType": "uint64", "name": "delay", "type": "uint64" },
+          { "internalType": "uint64", "name": "endedAt", "type": "uint64" },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "target",
+                "type": "address"
+              },
+              { "internalType": "bytes", "name": "data", "type": "bytes" }
+            ],
+            "internalType": "struct IGovernanceProxy.Call[]",
+            "name": "calls",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IGovernanceProxy.Change[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getEndedChanges",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IGovernanceProxy.Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          { "internalType": "uint64", "name": "id", "type": "uint64" },
+          { "internalType": "uint64", "name": "requestedAt", "type": "uint64" },
+          { "internalType": "uint64", "name": "delay", "type": "uint64" },
+          { "internalType": "uint64", "name": "endedAt", "type": "uint64" },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "target",
+                "type": "address"
+              },
+              { "internalType": "bytes", "name": "data", "type": "bytes" }
+            ],
+            "internalType": "struct IGovernanceProxy.Call[]",
+            "name": "calls",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IGovernanceProxy.Change[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getEndedChangesCount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint64", "name": "changeId", "type": "uint64" }
+    ],
+    "name": "getPendingChange",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IGovernanceProxy.Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          { "internalType": "uint64", "name": "id", "type": "uint64" },
+          { "internalType": "uint64", "name": "requestedAt", "type": "uint64" },
+          { "internalType": "uint64", "name": "delay", "type": "uint64" },
+          { "internalType": "uint64", "name": "endedAt", "type": "uint64" },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "target",
+                "type": "address"
+              },
+              { "internalType": "bytes", "name": "data", "type": "bytes" }
+            ],
+            "internalType": "struct IGovernanceProxy.Call[]",
+            "name": "calls",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IGovernanceProxy.Change",
+        "name": "change",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getPendingChanges",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "enum IGovernanceProxy.Status",
+            "name": "status",
+            "type": "uint8"
+          },
+          { "internalType": "uint64", "name": "id", "type": "uint64" },
+          { "internalType": "uint64", "name": "requestedAt", "type": "uint64" },
+          { "internalType": "uint64", "name": "delay", "type": "uint64" },
+          { "internalType": "uint64", "name": "endedAt", "type": "uint64" },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "target",
+                "type": "address"
+              },
+              { "internalType": "bytes", "name": "data", "type": "bytes" }
+            ],
+            "internalType": "struct IGovernanceProxy.Call[]",
+            "name": "calls",
+            "type": "tuple[]"
+          }
+        ],
+        "internalType": "struct IGovernanceProxy.Change[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" }
+    ],
+    "name": "getRoleMemberCount",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "hasRole",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nextChangeId",
+    "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          { "internalType": "address", "name": "target", "type": "address" },
+          { "internalType": "bytes", "name": "data", "type": "bytes" }
+        ],
+        "internalType": "struct IGovernanceProxy.Call[]",
+        "name": "calls",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "requestChange",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes4", "name": "selector", "type": "bytes4" },
+      { "internalType": "uint64", "name": "delay", "type": "uint64" }
+    ],
+    "name": "updateDelay",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,6 +1,6 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import useScroll from "../../hooks/use-scroll";
-import logo from '../../assets/logo.svg'
+import logo from "../../assets/logo.svg";
 
 export default function NavBar() {
   const scrolled = useScroll(50);
@@ -10,9 +10,7 @@ export default function NavBar() {
       <div
         id="navbar"
         className={`fixed top-0 w-full ${
-          scrolled
-            ? " opacity-50"
-            : "bg-white/0"
+          scrolled ? " opacity-50" : "bg-white/0"
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
