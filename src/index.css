@@ -3,7 +3,8 @@
 @tailwind utilities;
 @tailwind variants;
 html {
-  font-family: Calibre,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: Calibre, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 }
 
 body {
@@ -23,14 +24,13 @@ body {
   --block-bg: white;
 }
 
-
 #navbar {
   background: repeating-linear-gradient(
-          to bottom,
-          #f4f4f4,
-          #eeeeee 2.5px,
-          #eeeeee 2.5px,
-          #f4f4f4 5px
+    to bottom,
+    #f4f4f4,
+    #eeeeee 2.5px,
+    #eeeeee 2.5px,
+    #f4f4f4 5px
   );
 }
 
@@ -61,15 +61,14 @@ body {
 
 .bg-skin-block-bg > div {
   background: repeating-linear-gradient(
-          to bottom,
-          #f4f4f4,
-          #eeeeee 2.5px,
-          #eeeeee 2.5px,
-          #f4f4f4 5px
+    to bottom,
+    #f4f4f4,
+    #eeeeee 2.5px,
+    #eeeeee 2.5px,
+    #f4f4f4 5px
   ) !important;
   border-radius: 0 !important;
 }
-
 
 .button {
   position: relative !important;

@@ -1,43 +1,36 @@
-import './polyfills';
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {
-  BrowserRouter, Routes, Route, Outlet
-} from "react-router-dom";
+import "./polyfills";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
-import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
-import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mainnet } from 'wagmi/chains';
-import { publicProvider } from 'wagmi/providers/public';
-import Layout from './components/layout';
-import Home from './pages/home';
-import Governance from './pages/governance';
-import NoMatch from './components/nomatch';
-const { chains, publicClient } = configureChains(
-  [
-    mainnet,
-  ],
-  [publicProvider()]
-);
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { configureChains, createConfig, WagmiConfig } from "wagmi";
+import { mainnet } from "wagmi/chains";
+import { publicProvider } from "wagmi/providers/public";
+import Layout from "./components/layout";
+import Home from "./pages/home";
+import Governance from "./pages/governance";
+import NoMatch from "./components/nomatch";
+const { chains, publicClient } = configureChains([mainnet], [publicProvider()]);
 
 const { connectors } = getDefaultWallets({
-  appName: 'Conic Governance',
-  projectId: '3186a02ef7dceb55dde2ff6f1146967d',
-  chains
+  appName: "Conic Governance",
+  projectId: "3186a02ef7dceb55dde2ff6f1146967d",
+  chains,
 });
 
 const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
-  publicClient
+  publicClient,
 });
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 root.render(
