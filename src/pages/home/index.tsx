@@ -3,9 +3,9 @@ import Card from "../../components/card";
 
 const features = [
   {
-    title: "CNC Token",
+    title: "vlCNC",
     description:
-      "CNC allows users to shift liquidity of an asset across multiple Curve pools. ",
+      "Learn about how to use CNC to participate  in Conic governance",
     link: "https://docs.conic.finance/conic-finance/usdcnc-token/usdcnc-basics",
     demo: (
       <img
@@ -35,7 +35,7 @@ const features = [
   {
     title: "Discourse",
     description:
-      "The official governance discussing portal. Review live governance proposals and cast your vote on-chain.",
+      "The official DAO discussion forum. Join the discourse and review new proposals, ideas, and general topics from the Conic community.",
     link: "https://gov.conic.finance/",
     demo: (
       <img
@@ -50,7 +50,7 @@ const features = [
   {
     title: "Snapshot",
     description:
-      "A simple off-chain voting interface for community members to signal sentiment during the early stages of a proposal's life cycle.",
+      "Use your vlCNC voting power and participate in Liquidity Allocation Votes, Curve Amendment Proposals, and Conic Improvement Proposals.",
     link: "https://vote.conic.finance/",
     demo: (
       <img
