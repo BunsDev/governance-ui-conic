@@ -26,11 +26,9 @@ export default function Card({
           <Balancer>{title}</Balancer>
         </h2>
         <div className="prose-sm -mt-2 leading-normal text-gray-500 md:prose mt-2">
-            <ReactMarkdown
-              rehypePlugins={[rehypeRaw]}
-            >
-              {description}
-            </ReactMarkdown>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]}>
+            {description}
+          </ReactMarkdown>
         </div>
       </div>
     </div>
