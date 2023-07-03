@@ -9,7 +9,10 @@ import reportWebVitals from './reportWebVitals';
 import './index.css';
 
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { connectorsForWallets, getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import {
+  injectedWallet,
+} from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { mainnet } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
@@ -24,11 +27,14 @@ const { chains, publicClient } = configureChains(
   [publicProvider()]
 );
 
-const { connectors } = getDefaultWallets({
-  appName: 'Conic Governance',
-  projectId: '3186a02ef7dceb55dde2ff6f1146967d',
-  chains
-});
+const connectors = connectorsForWallets([
+  {
+    groupName: 'Recommended',
+    wallets: [
+      injectedWallet({ chains }),
+    ],
+  },
+]);
 
 const wagmiConfig = createConfig({
   autoConnect: true,
