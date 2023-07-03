@@ -7,10 +7,11 @@ import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 
 import "@rainbow-me/rainbowkit/styles.css";
-import { connectorsForWallets, getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import {
-  injectedWallet,
-} from '@rainbow-me/rainbowkit/wallets';
+  connectorsForWallets,
+  RainbowKitProvider,
+} from "@rainbow-me/rainbowkit";
+import { injectedWallet } from "@rainbow-me/rainbowkit/wallets";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { mainnet } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
@@ -22,10 +23,8 @@ const { chains, publicClient } = configureChains([mainnet], [publicProvider()]);
 
 const connectors = connectorsForWallets([
   {
-    groupName: 'Recommended',
-    wallets: [
-      injectedWallet({ chains }),
-    ],
+    groupName: "Recommended",
+    wallets: [injectedWallet({ chains })],
   },
 ]);
 
