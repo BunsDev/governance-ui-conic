@@ -68,9 +68,9 @@ export default function Home() {
   return (
     <>
       <div className="mb-8">
-        <h2 className="text-stone-100 font-bold text-3xl">Governance</h2>
+        <h2 className="text-stone-100 font-bold text-3xl">Conic Governance</h2>
         <p className="text-white text-2xl mt-2">
-          Share your opinion and shape the future of the protocol
+          The community led portal for all things Conic Governance
         </p>
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-4 xl:px-0">
